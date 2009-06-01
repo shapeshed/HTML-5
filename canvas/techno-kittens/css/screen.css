@@ -102,6 +102,7 @@ ul, ol, dl
 }
 li, dd, dt
   {
+  margin-left: 20px;
   font-size: 1em; /* Equivalent to 12pt */  
 }
 a
@@ -162,7 +163,7 @@ canvas{
 	border: 10px solid black;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
-	
+	margin-bottom: 1.5em;
 }
  
 
