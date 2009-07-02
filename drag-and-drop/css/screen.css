@@ -189,6 +189,7 @@ acronym {
 	height: 35px;
 	text-align: center;
 	background: url(../images/icons/text.png) center top no-repeat;	
+	-webkit-user-drag: element;
 }
 #files li:hover
 	{
