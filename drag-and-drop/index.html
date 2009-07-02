@@ -5,16 +5,11 @@
     <meta charset="utf-8">
 	<title>HTML5 Drag and Drop Demo</title>
 	<style type="text/css" media="screen">@import "css/screen.css";</style>
-
-	<script type="text/javascript" charset="utf-8">
-
-		
-	</script>
 </head>
 <body>
 			<p class="usage">HTML 5 Drag and Drop demo<br />
-				You need either Firefox 3.5, Safari 3, 4, Opera, Webkit Nightly to view this page.<br />
-				<a href="/">Blog post</a> | <a href="">Source code</a>
+				You need Firefox 3.5 to view this page.<br />
+				<a href="http://shapeshed.com/journal/drag_and_drop_in_html5">Blog post</a> | <a href="http://github.com/shapeshed/HTML-5/tree/master">Source code</a>
 				</p>
 				
 			<ul id="files">
@@ -24,27 +19,26 @@
 			</ul>
 
 
-			<div id="trash" ondrop="drop(this, event)" ondragenter="return false" ondragover="return false">>
+			<div id="trash" ondrop="drop(this, event)" ondragenter="return false" ondragover="return false">
 			</div>
 		
 			<script type="text/javascript" charset="utf-8">
-			   function drag(target, e) {
-			     e.dataTransfer.setData('Text', target.id);
-			   }
-
-			   function drop(target, e) {
-			     var id = e.dataTransfer.getData('Text');
-			     target.appendChild(document.getElementById(id));
-			     e.preventDefault();
-				 trashFull();
-			   }
+				function drag(target, e) {
+					e.dataTransfer.setData('Text', target.id);
+				}
+				function drop(target, e) {
+					var id = e.dataTransfer.getData('Text');
+					target.appendChild(document.getElementById(id));
+					e.preventDefault();
+					trashFull();
+				}
 				function trashFull(){
 					var classFull = "trashfull";
 					trashDiv = document.getElementById("trash");
 					if (!trashDiv) { return;}
 					if (trashDiv.className != classFull){
-						trashDiv.className = classFull;   
-						return false;
+					trashDiv.className = classFull;   
+					return false;
 					}
 				}
 			</script>
